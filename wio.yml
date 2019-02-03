@@ -1,0 +1,22 @@
+type: pkg
+
+project:
+  name: wio-spdlog
+  version: 1.3.1
+  author: Ruslan Baratov
+  keywords:
+  - wio
+  - pkg
+  compile_options:
+    wio_version: 0.6.0
+    header_only: true
+    default_target: tests
+    flags:
+    - $darwin(-Wall -Wextra -Wconversion -pedantic -Wfatal-errors)
+    - $linux(-Wall -Wextra -Wconversion -pedantic -Wfatal-errors)
+
+targets:
+  tests:
+    src: tests
+    platform: native
+
